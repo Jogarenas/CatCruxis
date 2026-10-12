@@ -25,4 +25,4 @@ Each original image is accessible at `https://images.unsplash.com/<Source image 
 
 Manrope and DM Sans were downloaded from Google Fonts. They are redistributed under the SIL Open Font License, with full copyright notices and licenses in `fonts/manrope-LICENSE.txt` and `fonts/dmsans-LICENSE.txt`.
 
-The CatCruxis wordmark and CC favicon are text placeholders created for this prototype.
+The CatCruxis logo in `images/CatCruxisLogo.png` was supplied by the project owner and is used in the header, mobile navigation, footer, and browser favicon.

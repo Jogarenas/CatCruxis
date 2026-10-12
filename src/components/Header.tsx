@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Menu, Search, X } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { SearchDialog } from "./SearchDialog";
+import { Logo } from "./Logo";
 const links = [
   { to: "/", label: "Discover" },
   { to: "/this-week", label: "This Week" },
@@ -31,11 +32,8 @@ export function Header() {
         Skip to content
       </a>
       <header className="site-header">
-        <Link to="/" className="wordmark" aria-label="CatCruxis home">
-          CatCruxis
-          <span className="brand-star" aria-hidden="true">
-            ✳
-          </span>
+        <Link to="/" className="brand-link" aria-label="CatCruxis home">
+          <Logo />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {links.map((link) => (
@@ -66,12 +64,7 @@ export function Header() {
       </header>
       <dialog aria-label="Campus navigation" className="mobile-menu" ref={menu}>
         <div className="dialog-heading">
-          <span className="wordmark">
-            The CC
-            <span className="brand-star" aria-hidden="true">
-              ✳
-            </span>
-          </span>
+          <Logo />
           <button
             className="circle-button"
             aria-label="Close navigation"

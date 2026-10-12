@@ -1,15 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
         <div>
-          <Link to="/" className="wordmark">
-            CatCruxis
-            <span className="brand-star" aria-hidden="true">
-              ✳
-            </span>
+          <Link to="/" className="brand-link" aria-label="Back to CatCruxis">
+            <Logo />
           </Link>
           <p>One campus. Every event.</p>
         </div>
