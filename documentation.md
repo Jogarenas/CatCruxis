@@ -4,7 +4,7 @@ DAT 153, Team SQLarpers
 
 ## 1. Team
 
-| Member | GitHub |
+| Member       | GitHub |
 | Rainul Hakim | RainulHakim |
 | Jonathan     | Jogarenas |
 
@@ -42,7 +42,7 @@ And the Hurt Hub fields:
 | venue (name and address)      | building.building_name and location.room_number |
 | organizer (a list)            | organizer.organizer_name, plus event_organizer |
 | categories (a list)           | category.category_name, plus event_category |
-| url | event_source.source_url |
+| url                           | event_source.source_url |
 
 Things in the data that shaped the design: a WildcatSync event can have several hosts (one had nine), and Hurt Hub gives a list of organizers and a list of categories too. WildcatSync locations are free text, spelled different ways, and virtual events have a Zoom link there. Hurt Hub titles come HTML-encoded, so the ETL has to clean them.
 
