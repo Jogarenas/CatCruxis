@@ -8,14 +8,14 @@ DAT 153, Team SQLarpers
 | Rainul Hakim | RainulHakim |
 | Jonathan     | Jogarenas |
 
-| Sprint | Product Owner   | Scrum Master   | Developer |
+| Sprint | Product Owner   | Scrum Master  | Developer |
 | 01     | Rainul          | Jonathan      | Rainul & Jonathan |
 | 02     | Jonathan        | Rainul        | Jonathan & Rainul |
 | 03     | Rainul          | Jonathan      | Rainul & Jonathan |
 
 ## 2. Source data
 
-Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically:
+Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically...and more to come ;) :
 
 - WildcatSync RSS feed: https://wildcatsync.davidson.edu/events.rss (where student orgs and departments post)
 - Hurt Hub events API: https://hurthub.davidson.edu/wp-json/tribe/events/v1/events (JSON)
