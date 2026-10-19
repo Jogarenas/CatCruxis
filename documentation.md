@@ -5,15 +5,13 @@ DAT 153, Team SQLarpers
 ## 1. Team
 
 | Member | GitHub |
-|---|---|
 | Rainul Hakim | RainulHakim |
-| Jonathan | Jogarenas |
+| Jonathan     | Jogarenas |
 
-| Sprint | Product Owner | Scrum Master | Developer |
-|---|---|---|---|
-| 01 | Rainul | Jonathan | Rainul & Jonathan |
-| 02 | Jonathan | Rainul | Jonathan & Rainul |
-| 03 | Rainul | Jonathan | Rainul & Jonathan |
+| Sprint | Product Owner   | Scrum Master   | Developer |
+| 01     | Rainul          | Jonathan      | Rainul & Jonathan |
+| 02     | Jonathan        | Rainul        | Jonathan & Rainul |
+| 03     | Rainul          | Jonathan      | Rainul & Jonathan |
 
 ## 2. Source data
 
@@ -27,7 +25,6 @@ This is Option 2. The sources decided what our tables look like.
 How the WildcatSync fields map to our tables:
 
 | Feed field | Table.column |
-|---|---|
 | title | event.title |
 | description | event.description |
 | events:start / events:end | event.start_time / event.end_time |
@@ -38,14 +35,13 @@ How the WildcatSync fields map to our tables:
 
 And the Hurt Hub fields:
 
-| API field | Table.column |
-|---|---|
-| title | event.title |
-| description | event.description |
+| API field                     | Table.column |
+| title                         | event.title |
+| description                   | event.description |
 | utc_start_date / utc_end_date | event.start_time / event.end_time |
-| venue (name and address) | building.building_name and location.room_number |
-| organizer (a list) | organizer.organizer_name, plus event_organizer |
-| categories (a list) | category.category_name, plus event_category |
+| venue (name and address)      | building.building_name and location.room_number |
+| organizer (a list)            | organizer.organizer_name, plus event_organizer |
+| categories (a list)           | category.category_name, plus event_category |
 | url | event_source.source_url |
 
 Things in the data that shaped the design: a WildcatSync event can have several hosts (one had nine), and Hurt Hub gives a list of organizers and a list of categories too. WildcatSync locations are free text, spelled different ways, and virtual events have a Zoom link there. Hurt Hub titles come HTML-encoded, so the ETL has to clean them.
@@ -91,57 +87,17 @@ Every table has a surrogate primary key (`table_name_id`), so that column determ
 ### 3.4 Sprint 02 flags
 
 
-| Flag | Result |
-|---|---|
+| Flag                                                | Result |
+
 | location_name repeats building_name and room_number | Fixed. Removed location_name. |
-| latitude and longitude depend on the building | Fixed. Moved to a new building table (3.5). |
-| Same place spelled different ways | Not a 3NF issue. UNIQUE constraints stop exact duplicates, and the ETL will clean up the spellings. |
-| Weekly events repeat title and description | Fine. Each one is a separate event with its own date, and title doesn't determine any other column. |
-| Organizer names differ between sources | Fine. organizer_name is unique and the ETL will match names up. |
+| latitude and longitude depend on the building       | Fixed. Moved to a new building table (3.5). |
+| Same place spelled different ways                   | Not a 3NF issue. UNIQUE constraints stop exact duplicates, and the ETL will clean up the spellings. |
+| Weekly events repeat title and description          | Fine. Each one is a separate event with its own date, and title doesn't determine any other column. |
+| Organizer names differ between sources              | Fine. organizer_name is unique and the ETL will match names up. |
 
 We didn't denormalize anything.
 
-### 3.5 Decomposing location
-
-Our first location table looked like this (coordinates are made up):
-
-| location_id | location_name | building_name | room_number | latitude | longitude |
-|---|---|---|---|---|---|
-| 1 | Wall 210 | Wall | 210 | 35.500 | -80.848 |
-| 2 | Wall 320 Classroom | Wall | 320 | 35.500 | -80.848 |
-| 3 | Dana 146 | Dana | 146 | 35.499 | -80.847 |
-| 4 | Chambers 1027 | Chambers | 1027 | 35.501 | -80.849 |
-| 5 | Chambers 2106 | Chambers | 2106 | 35.501 | -80.849 |
-
-building_name determines latitude and longitude, and none of those are the key, so this isn't 3NF. It causes real problems:
-
-- Update: Wall's coordinates are in rows 1 and 2. Fix one and miss the other and the table contradicts itself.
-- Delete: Dana only appears in row 3, so deleting Dana 146 loses where Dana is.
-- Insert: we can't add a building until there's an event in a specific room.
-
-So we split it into two tables.
-
-building
-
-| building_id | building_name | latitude | longitude |
-|---|---|---|---|
-| 1 | Wall | 35.500 | -80.848 |
-| 2 | Dana | 35.499 | -80.847 |
-| 3 | Chambers | 35.501 | -80.849 |
-
-location
-
-| location_id | building_id | room_number |
-|---|---|---|
-| 1 | 1 | 210 |
-| 2 | 1 | 320 |
-| 3 | 2 | 146 |
-| 4 | 3 | 1027 |
-| 5 | 3 | 2106 |
-
-Now each building's coordinates are in one row, buildings can exist without rooms, and deleting a room keeps the building.
-
-### 3.6 Changes since Sprint 02
+### 3.5 Changes since Sprint 02
 
 1. Added the building table and moved latitude and longitude into it. Dropped location_name and building_name from location.
 2. Event to location is exactly one everywhere (Sprint 02 said "at most one" in one place). Virtual events use the "Online / TBD" building so event.location_id can be NOT NULL.
@@ -151,7 +107,7 @@ Now each building's coordinates are in one row, buildings can exist without room
 6. source_type is `platform`, `website`, `email` or `student_submission`.
 7. Deleting an event also deletes its rows in the bridge tables.
 
-### 3.7 Tables
+### 3.6 Tables
 
 - building: a place on campus with its coordinates. Also holds "Online / TBD" for virtual events.
 - location: a building plus an optional room. Many events can share one.
@@ -164,7 +120,6 @@ Now each building's coordinates are in one row, buildings can exist without room
 - event_source: bridge table, one row per event on a source, with the link and the date we found it.
 
 Many-to-many relationships: event/organizer, event/category and event/source. The event table connects to four others (location, organizer, category, source). No self-referencing keys.
-
 
 
 ## 4. Reflection
