@@ -24,14 +24,14 @@ This is Option 2. The sources decided what our tables look like.
 
 How the WildcatSync fields map to our tables:
 
-| Feed field | Table.column |
-| title | event.title |
-| description | event.description |
+| Feed field                | Table.column |
+| title                     | event.title |
+| description               | event.description |
 | events:start / events:end | event.start_time / event.end_time |
-| events:location | building.building_name and location.room_number |
-| events:host | organizer.organizer_name, plus event_organizer |
-| category | category.category_name, plus event_category |
-| link | event_source.source_url |
+| events:location           | building.building_name and location.room_number |
+| events:host               | organizer.organizer_name, plus event_organizer |
+| category                  | category.category_name, plus event_category |
+| link                      | event_source.source_url |
 
 And the Hurt Hub fields:
 
