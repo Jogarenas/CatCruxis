@@ -3007,7 +3007,6 @@ html:has(dialog[open]) {
   height: 78px;
   object-fit: contain;
   flex-shrink: 0;
-  mix-blend-mode: multiply;
 }
 .footer-top .brand-logo {
   width: 128px;
