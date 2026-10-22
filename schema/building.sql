@@ -9,4 +9,4 @@ CREATE TABLE building(
     CONSTRAINT valid_longitude CHECK (
         longitude BETWEEN -180 AND 180
     )
-)
+);
