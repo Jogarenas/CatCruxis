@@ -15,7 +15,7 @@ DAT 153, Team SQLarpers
 
 ## 2. Source data
 
-Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically...and more to come ;) :
+Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically...and more to come ;
 
 - WildcatSync RSS feed: https://wildcatsync.davidson.edu/events.rss (where student orgs and departments post)
 - Hurt Hub events API: https://hurthub.davidson.edu/wp-json/tribe/events/v1/events (JSON)
