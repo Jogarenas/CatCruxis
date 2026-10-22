@@ -1,0 +1,4 @@
+CREATE TABLE category (
+    category_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    category_name TEXT NOT NULL UNIQUE
+);
