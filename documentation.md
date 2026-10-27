@@ -5,10 +5,12 @@ DAT 153, Team SQLarpers
 ## 1. Team
 
 | Member       | GitHub |
+|------|------|
 | Rainul Hakim | RainulHakim |
 | Jonathan     | Jogarenas |
 
 | Sprint | Product Owner   | Scrum Master  | Developer |
+|------|------|------|-------|
 | 01     | Rainul          | Jonathan      | Rainul & Jonathan |
 | 02     | Jonathan        | Rainul        | Jonathan & Rainul |
 | 03     | Rainul          | Jonathan      | Rainul & Jonathan |
@@ -25,6 +27,7 @@ This is Option 2. The sources decided what our tables look like.
 How the WildcatSync fields map to our tables:
 
 | Feed field                | Table.column |
+|-------|-------|
 | title                     | event.title |
 | description               | event.description |
 | events:start / events:end | event.start_time / event.end_time |
@@ -33,9 +36,14 @@ How the WildcatSync fields map to our tables:
 | category                  | category.category_name, plus event_category |
 | link                      | event_source.source_url |
 
+
+
+
+
 And the Hurt Hub fields:
 
 | API field                     | Table.column |
+|-------|-------|
 | title                         | event.title |
 | description                   | event.description |
 | utc_start_date / utc_end_date | event.start_time / event.end_time |
