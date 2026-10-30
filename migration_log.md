@@ -9,3 +9,9 @@ A running record of every schema change made to the live Supabase database after
 •⁠  ⁠*Why:* Baseline for the future of the project
 
 Migration #1, October 22, 20261022210318_initial_schema
+
+## 2026-10-30: Adding metadata columns
+
+•⁠  ⁠*Migration file:* ⁠ supabase/migrations/`20261030140653_created_modified_times.sql`
+•⁠  ⁠*What changed:* Added the created and modified times to each column in our schema.
+•⁠  ⁠*Why:* Needed to get started on the ETL process, aka sprint 4
