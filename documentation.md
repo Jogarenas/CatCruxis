@@ -1,21 +1,24 @@
 # CatCruxis (The CC) Documentation
 
-DAT 153, Team SQLarpers
+**DAT 153 — Team SQLarpers**
 
-## 1. Team
+## Project team
 
-| Member       | GitHub |
-|------|------|
+| Member | GitHub |
+|---|---|
 | Rainul Hakim | RainulHakim |
-| Jonathan     | Jogarenas |
+| Jonathan | Jogarenas |
 
-| Sprint | Product Owner   | Scrum Master  | Developer |
-|------|------|------|-------|
-| 01     | Rainul          | Jonathan      | Rainul & Jonathan |
-| 02     | Jonathan        | Rainul        | Jonathan & Rainul |
-| 03     | Rainul          | Jonathan      | Rainul & Jonathan |
+| Sprint | Product Owner | Scrum Master | Developer |
+|---|---|---|---|
+| 01 | Rainul | Jonathan | Rainul & Jonathan |
+| 02 | Jonathan | Rainul | Jonathan & Rainul |
+| 03 | Rainul | Jonathan | Rainul & Jonathan |
+| 04 | | | |
+| 05 | | | |
+| 06 | | | |
 
-## 2. Source data
+## Source data
 
 Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically...and more to come ;
 
@@ -24,41 +27,43 @@ Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, depar
 
 This is Option 2. The sources decided what our tables look like.
 
+### WildcatSync field mapping
+
 How the WildcatSync fields map to our tables:
 
-| Feed field                | Table.column |
-|-------|-------|
-| title                     | event.title |
-| description               | event.description |
+| Feed field | Table.column |
+|---|---|
+| title | event.title |
+| description | event.description |
 | events:start / events:end | event.start_time / event.end_time |
-| events:location           | building.building_name and location.room_number |
-| events:host               | organizer.organizer_name, plus event_organizer |
-| category                  | category.category_name, plus event_category |
-| link                      | event_source.source_url |
+| events:location | building.building_name and location.room_number |
+| events:host | organizer.organizer_name, plus event_organizer |
+| category | category.category_name, plus event_category |
+| link | event_source.source_url |
 
-
-
-
+### Hurt Hub field mapping
 
 And the Hurt Hub fields:
 
-| API field                     | Table.column |
-|-------|-------|
-| title                         | event.title |
-| description                   | event.description |
+| API field | Table.column |
+|---|---|
+| title | event.title |
+| description | event.description |
 | utc_start_date / utc_end_date | event.start_time / event.end_time |
-| venue (name and address)      | building.building_name and location.room_number |
-| organizer (a list)            | organizer.organizer_name, plus event_organizer |
-| categories (a list)           | category.category_name, plus event_category |
-| url                           | event_source.source_url |
+| venue (name and address) | building.building_name and location.room_number |
+| organizer (a list) | organizer.organizer_name, plus event_organizer |
+| categories (a list) | category.category_name, plus event_category |
+| url | event_source.source_url |
+
+### Data characteristics and integration considerations
 
 Things in the data that shaped the design: a WildcatSync event can have several hosts (one had nine), and Hurt Hub gives a list of organizers and a list of categories too. WildcatSync locations are free text, spelled different ways, and virtual events have a Zoom link there. Hurt Hub titles come HTML-encoded, so the ETL has to clean them.
 
 Neither source has official_status, so we set it ourselves. We also make up the source rows and look up building coordinates by hand. Handshake, department email and student submissions can't be scraped, so those events will be made up.
 
-## 3. Database design
+## Database design
 
-### 3.1 ER diagram
+### ER diagram
 
 ![ER diagram](docs/erd.png)
 
@@ -72,7 +77,9 @@ Made in dbdiagram.io from `docs/schema.dbml` (copied in the appendix). Each line
 
 The database can't force "at least one" organizer, category and source on an event. We'll make sure of that in the Sprint 04 load script.
 
-### 3.2 Functional dependencies
+### 3NF analysis
+
+#### Functional dependencies
 
 Every table has a surrogate primary key (`table_name_id`), so that column determines all the others. The other dependencies:
 
@@ -84,28 +91,27 @@ Every table has a surrogate primary key (`table_name_id`), so that column determ
 - event_organizer, event_category: only the two foreign keys, which are unique as a pair.
 - event_source: (event_id, source_id) is unique and determines source_url and date_found.
 
-### 3.3 Normal forms
+#### Normal forms
 
-1NF: every column holds a single value. Hosts, categories and sources aren't stored as lists in event, they're in the bridge tables. Building and room are separate columns in location.
+**1NF:** every column holds a single value. Hosts, categories and sources aren't stored as lists in event, they're in the bridge tables. Building and room are separate columns in location.
 
-2NF: every table has a one-column primary key, so a column can't depend on only part of it. For event_source we also checked the pair (event_id, source_id), and source_url and date_found depend on the whole pair.
+**2NF:** every table has a one-column primary key, so a column can't depend on only part of it. For event_source we also checked the pair (event_id, source_id), and source_url and date_found depend on the whole pair.
 
-3NF: in every table the non-key columns depend only on the key. The one place this failed was the old location table, covered in 3.5.
+**3NF:** in every table the non-key columns depend only on the key. The one place this failed was the old location table, covered in Changes since Sprint 02.
 
-### 3.4 Sprint 02 flags
+#### Sprint 02 flags
 
-
-| Flag                                                | Result |
-
+| Flag | Result |
+|---|---|
 | location_name repeats building_name and room_number | Fixed. Removed location_name. |
-| latitude and longitude depend on the building       | Fixed. Moved to a new building table (3.5). |
-| Same place spelled different ways                   | Not a 3NF issue. UNIQUE constraints stop exact duplicates, and the ETL will clean up the spellings. |
-| Weekly events repeat title and description          | Fine. Each one is a separate event with its own date, and title doesn't determine any other column. |
-| Organizer names differ between sources              | Fine. organizer_name is unique and the ETL will match names up. |
+| latitude and longitude depend on the building | Fixed. Moved to a new building table (Changes since Sprint 02). |
+| Same place spelled different ways | Not a 3NF issue. UNIQUE constraints stop exact duplicates, and the ETL will clean up the spellings. |
+| Weekly events repeat title and description | Fine. Each one is a separate event with its own date, and title doesn't determine any other column. |
+| Organizer names differ between sources | Fine. organizer_name is unique and the ETL will match names up. |
 
 We didn't denormalize anything.
 
-### 3.5 Changes since Sprint 02
+### Changes since Sprint 02
 
 1. Added the building table and moved latitude and longitude into it. Dropped location_name and building_name from location.
 2. Event to location is exactly one everywhere (Sprint 02 said "at most one" in one place). Virtual events use the "Online / TBD" building so event.location_id can be NOT NULL.
@@ -115,32 +121,45 @@ We didn't denormalize anything.
 6. source_type is `platform`, `website`, `email` or `student_submission`.
 7. Deleting an event also deletes its rows in the bridge tables.
 
-### 3.6 Tables
+### Tables, views, and functions/procedures
 
-- building: a place on campus with its coordinates. Also holds "Online / TBD" for virtual events.
-- location: a building plus an optional room. Many events can share one.
-- event: one event at one date and time. A weekly meeting is a new row each week.
-- organizer: a group that hosts events, with a type.
-- event_organizer: bridge table, one row per organizer hosting an event.
-- category: a label like Social or Athletics.
-- event_category: bridge table, one row per category on an event.
-- source: where an event was found (WildcatSync, Handshake, Hurt Hub, email, student submission).
-- event_source: bridge table, one row per event on a source, with the link and the date we found it.
+#### Tables
+
+- **building:** a place on campus with its coordinates. Also holds "Online / TBD" for virtual events.
+- **location:** a building plus an optional room. Many events can share one.
+- **event:** one event at one date and time. A weekly meeting is a new row each week.
+- **organizer:** a group that hosts events, with a type.
+- **event_organizer:** bridge table, one row per organizer hosting an event.
+- **category:** a label like Social or Athletics.
+- **event_category:** bridge table, one row per category on an event.
+- **source:** where an event was found (WildcatSync, Handshake, Hurt Hub, email, student submission).
+- **event_source:** bridge table, one row per event on a source, with the link and the date we found it.
 
 Many-to-many relationships: event/organizer, event/category and event/source. The event table connects to four others (location, organizer, category, source). No self-referencing keys.
 
+#### Views
 
-## 4. Reflection
+#### Functions/procedures
+
+## Analysis and reflection questions
+
+### Data sourcing and integration
+
+### Design reflection
+
+### Deployment and migration reflection
+
+### Project outcomes and learning
 
 To be written in later sprints.
 
-## 5. Acknowledgments
+## Acknowledgments
 
 dbdiagram.io for the ER diagram.
 
 ## Appendix: DBML
 
-
+```dbml
 Table building {
   building_id integer [pk]
   building_name text [not null, unique]
@@ -221,4 +240,4 @@ Ref: event_category.event_id > event.event_id
 Ref: event_category.category_id > category.category_id
 Ref: event_source.event_id > event.event_id
 Ref: event_source.source_id > source.source_id
-
+```
