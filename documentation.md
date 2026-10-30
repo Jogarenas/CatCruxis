@@ -65,9 +65,9 @@ Neither source has official_status, so we set it ourselves. We also make up the 
 
 ### ER diagram
 
-![ER diagram](docs/erd.png)
+![ER diagram](images/erd.jpeg)
 
-Made in dbdiagram.io from `docs/schema.dbml` (copied in the appendix). Each line is a foreign key. The crow's foot end is the table that has the foreign key column. dbdiagram only draws the many side, so the rest is in these rules:
+Made in dbdiagram.io from `images/schema.dbml` (copied in the appendix). Each line is a foreign key. The crow's foot end is the table that has the foreign key column. dbdiagram only draws the many side, so the rest is in these rules:
 
 1. A location is in exactly one building. A building has zero or more locations.
 2. An event is at exactly one location. A location has zero or more events. Online or undecided events use a location in a building called "Online / TBD".
