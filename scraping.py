@@ -1,7 +1,5 @@
-"""Download CatCruxis event sources into data/raw beside this script.
-
-Install the dependency with: python3 -m pip install requests
-Run with: python3 extract_events.py
+"""
+Download CatCruxis event sources into data/raw 
 """
 import re
 from urllib.parse import urljoin
