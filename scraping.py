@@ -87,7 +87,7 @@ def download_hurt_hub(session):
                 "per_page": 50,
                 "page": page,
                 # Request historical events as well as upcoming events.
-                "start_date": "1970-01-01 00:00:00",
+                "start_date": "2026-01-01 00:00:00",
             },
             timeout=TIMEOUT,
         )

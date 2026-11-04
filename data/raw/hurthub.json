@@ -1,0 +1,1148 @@
+{
+  "events": [
+    {
+      "id": 1862,
+      "global_id": "hurthub.davidson.edu?id=1862",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=1862"
+      ],
+      "author": "2",
+      "status": "publish",
+      "date": "2026-08-04 07:32:01",
+      "date_utc": "2026-08-04 07:32:01",
+      "modified": "2026-11-03 21:47:28",
+      "modified_utc": "2026-11-04 02:47:28",
+      "url": "https://hurthub.davidson.edu/event/building-a-lean-startup-fall-2026/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/1862",
+      "title": "Building a Lean Startup &#8211; Fall 2026",
+      "description": "<div>Learn how to jumpstart your business idea in this 7 session course using the Lean Startup methodology.</div>\n<div style=\"margin-top: 20px\">\n<div style=\"margin: 20px 10px;font-size: 15px;line-height: 22px;font-weight: 400;text-align: left\">\n<p><strong><strong>Building a Lean Startup</strong></strong><br /><strong><strong>Wednesdays, Sept 23 – Nov 11 | 6:45–8:15 pm | Room 208 </strong></strong><strong><strong>| No class on October 14</strong></strong></p>\n<p>The Hurt Hub at Davidson is excited to be offering another round of the Building a Lean Startup course for all interested students, faculty, staff, and members of the general public. This course is an opportunity for individuals or small business teams to learn about the core principles of entrepreneurship and work on developing an idea through the Lean Startup methodology. No previous business experience required!</p>\n<p>The Lean Startup methodology is an approach to building new businesses rooted in the belief that entrepreneurs must investigate, experiment, test, and iterate as they develop new products and services. Unlike traditional startup approaches, lean startups move quickly, iterate often and continuously solicit feedback from their customers.</p>\n<p>Taught by Rebecca Weeks Watson*, Building a Lean Startup is a 7-session course covering topics including how to come up with business ideas, how to get users/customers and grow, how to execute on sales and marketing, how to hire, how to raise money, which key metrics to measure, and more. All of these topic areas will rely on a build-measure-learn approach to make sure you find effective solutions quickly and inexpensively.</p>\n<p>Lean Startup is a mindset and a methodology that is used across industries, sectors, and professions to solve problems and understand what your customers need most. We welcome people from all backgrounds and encourage an open and engaged mindset!</p>\n<p><strong><strong>Cost:</strong></strong></p>\n<p>Thanks to the Hurt Hub&#8217;s partnerships and with the support of Amplify Davidson, this course is free to particpants.</p>\n<p><strong><strong>Course Schedule:</strong></strong></p>\n<p>Wednesday Evenings, September 23 – November 11 | 7 Weeks, 6:45–8:15 pm. No class on October 14.</p>\n<p><strong><strong>*Please email chsmith2@davidson.edu for any accomodations needed related to missing class.</strong></strong></p>\n<p><strong><strong>About the Instructor: </strong></strong>Rebecca Weeks Watson is a digital media entrepreneur with 17 years of experience in Silicon Valley and two U.S. patent awards. After starting her career in finance and then consulting for Match.com, she decided to pursue her interest in the startup world. She was on the founding team and led Business Development for two different marketing technology companies, one of which was acquired by Meredith Corporation. She has spoken at 50 conferences nationwide and enjoys lecturing at the University of Virginia&#8217;s undergrad business school. Most recently Rebecca founded a groundbreaking interview series called The Reveal that uncovers surprising personal stories of world-class leaders.</p>\n<p><em><em>The Hurt Hub welcomes requests for reasonable accommodations related to disability and will strive to make this program accessible to participants. Please contact our team at the Hurt Hub at hurthub@davidson.edu</em></em><em><em> </em></em><em><em>to make such a request.</em></em></p>\n</div>\n</div>",
+      "excerpt": "",
+      "slug": "building-a-lean-startup-fall-2026",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-scaled.jpg",
+        "id": 1879,
+        "extension": "jpg",
+        "width": 2560,
+        "height": 1707,
+        "filesize": 799657,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 200,
+            "mime-type": "image/jpeg",
+            "filesize": 19725,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-300x200.jpg"
+          },
+          "large": {
+            "width": 1024,
+            "height": 683,
+            "mime-type": "image/jpeg",
+            "filesize": 151668,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-1024x683.jpg"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/jpeg",
+            "filesize": 8540,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-150x150.jpg"
+          },
+          "hh-card": {
+            "width": 720,
+            "height": 540,
+            "mime-type": "image/jpeg",
+            "filesize": 91847,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-720x540.jpg"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 800,
+            "mime-type": "image/jpeg",
+            "filesize": 108413,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-600x800.jpg"
+          },
+          "hh-wide": {
+            "width": 1600,
+            "height": 900,
+            "mime-type": "image/jpeg",
+            "filesize": 281495,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-1600x900.jpg"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/jpeg",
+            "filesize": 23625,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1862_image-320x240.jpg"
+          }
+        },
+        "original_image": "1862_image.jpg"
+      },
+      "all_day": false,
+      "start_date": "2026-09-23 18:45:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "09",
+        "day": "23",
+        "hour": "18",
+        "minutes": "45",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-11 20:15:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "11",
+        "hour": "20",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-09-23 22:45:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "09",
+        "day": "23",
+        "hour": "22",
+        "minutes": "45",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-12 01:15:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "12",
+        "hour": "01",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "$",
+        "currency_code": "USD",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "https://www.eventbrite.com/e/building-a-lean-startup-fall-2026-tickets-1994013703665",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Class",
+          "slug": "class",
+          "term_group": 0,
+          "term_taxonomy_id": 109,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 2,
+          "filter": "raw",
+          "id": 109,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/109",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Discussion",
+          "slug": "discussion",
+          "term_group": 0,
+          "term_taxonomy_id": 111,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 8,
+          "filter": "raw",
+          "id": 111,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/111",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 6238,
+        "status": "publish",
+        "date": "2026-09-18 22:48:16",
+        "date_utc": "2026-09-19 02:48:16",
+        "modified": "2026-09-18 22:48:16",
+        "modified_utc": "2026-09-19 02:48:16",
+        "url": "https://hurthub.davidson.edu/venue/the-hurt-hub-at-davidson-college-2/",
+        "venue": "The Hurt Hub at Davidson College",
+        "slug": "the-hurt-hub-at-davidson-college-2",
+        "address": "210 Delburg Street, Davidson, NC 28036",
+        "city": "Davidson",
+        "country": "US",
+        "state": "NC",
+        "zip": "28036",
+        "stateprovince": "NC",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "hurthub.davidson.edu?id=6238",
+        "global_id_lineage": [
+          "hurthub.davidson.edu?id=6238"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 1860,
+          "author": "1",
+          "status": "publish",
+          "date": "2026-08-04 07:31:59",
+          "date_utc": "2026-08-04 07:31:59",
+          "modified": "2026-08-04 07:31:59",
+          "modified_utc": "2026-08-04 07:31:59",
+          "url": "https://hurthub.davidson.edu/organizer/the-hurt-hubdavidson/",
+          "organizer": "The Hurt Hub@Davidson",
+          "slug": "the-hurt-hubdavidson",
+          "website": "https://www.eventbrite.com/o/the-hurt-hubdavidson-18005827641",
+          "global_id": "hurthub.davidson.edu?id=1860",
+          "global_id_lineage": [
+            "hurthub.davidson.edu?id=1860"
+          ]
+        }
+      ],
+      "custom_fields": [],
+      "hh_event_audience": [
+        81,
+        82,
+        88,
+        87,
+        84
+      ],
+      "hh_event_topic": []
+    },
+    {
+      "id": 6340,
+      "global_id": "hurthub.davidson.edu?id=6340",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=6340"
+      ],
+      "author": "2",
+      "status": "publish",
+      "date": "2026-10-07 10:47:56",
+      "date_utc": "2026-10-07 14:47:56",
+      "modified": "2026-11-03 21:47:30",
+      "modified_utc": "2026-11-04 02:47:30",
+      "url": "https://hurthub.davidson.edu/event/the-extended-mind-a-field-guide-to-human-ai-co-evolution/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/6340",
+      "title": "The Extended Mind: A Field Guide to Human-AI Co-Evolution",
+      "description": "<div>Facilitated by Peter Gray, PhD in Biological Anthropology (Harvard), former Anthropology Professor, and now Senior Researcher at TIAA</div>\n<div style=\"margin-top: 20px\">\n<div style=\"margin: 20px 10px;font-size: 15px;line-height: 22px;font-weight: 400;text-align: left\">\n<p>What would an alien anthropologist notice about humans and our technologies?</p>\n<p>Every technology humans have ever adopted — fire, writing, the printing press — has expanded human capabilities while reshaping humanity itself. This interactive workshop starts with that deep evolutionary pattern and uses it to build a practical, portable framework for evaluating today&#8217;s AI tools.</p>\n<p>Working from your own AI use at work, school, or home, you&#8217;ll map which of your current tools are quietly reshaping your skills and habits, then score one real tool you use regularly on how much it helps you, how much it exploits you, and how much it acts without your review.</p>\n<p><em><em>The Hurt Hub welcomes requests for reasonable accommodations related to disability and will strive to make this program accessible to participants. Please contact our team at the Hurt Hub at hurthub@davidson.edu</em></em><em><em> </em></em><em><em>to make such a request.</em></em></p>\n</div>\n</div>",
+      "excerpt": "",
+      "slug": "the-extended-mind-a-field-guide-to-human-ai-co-evolution",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image.png",
+        "id": 6351,
+        "extension": "png",
+        "width": 1880,
+        "height": 940,
+        "filesize": 380814,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 150,
+            "mime-type": "image/png",
+            "filesize": 28980,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-300x150.png"
+          },
+          "large": {
+            "width": 1024,
+            "height": 512,
+            "mime-type": "image/png",
+            "filesize": 184475,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-1024x512.png"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/png",
+            "filesize": 20137,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-150x150.png"
+          },
+          "hh-card": {
+            "width": 720,
+            "height": 540,
+            "mime-type": "image/png",
+            "filesize": 170719,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-720x540.png"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 800,
+            "mime-type": "image/png",
+            "filesize": 215408,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-600x800.png"
+          },
+          "hh-wide": {
+            "width": 1600,
+            "height": 900,
+            "mime-type": "image/png",
+            "filesize": 398963,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-1600x900.png"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/png",
+            "filesize": 49945,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6340_image-320x240.png"
+          }
+        }
+      },
+      "all_day": false,
+      "start_date": "2026-11-04 16:30:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "04",
+        "hour": "16",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-04 17:30:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "04",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-11-04 21:30:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "04",
+        "hour": "21",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-04 22:30:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "04",
+        "hour": "22",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_code": "",
+        "currency_position": "",
+        "values": []
+      },
+      "website": "https://www.eventbrite.com/e/the-extended-mind-a-field-guide-to-human-ai-co-evolution-tickets-2003021993703",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [],
+      "tags": [],
+      "venue": {
+        "id": 6341,
+        "status": "publish",
+        "date": "2026-10-07 10:47:56",
+        "date_utc": "2026-10-07 14:47:56",
+        "modified": "2026-10-07 10:47:56",
+        "modified_utc": "2026-10-07 14:47:56",
+        "url": "https://hurthub.davidson.edu/venue/the-hurt-hub-at-davidson-college-6/",
+        "venue": "The Hurt Hub at Davidson College",
+        "slug": "the-hurt-hub-at-davidson-college-6",
+        "address": "210 Delburg Street, Davidson, NC 28036",
+        "city": "Davidson",
+        "country": "US",
+        "state": "NC",
+        "zip": "28036",
+        "stateprovince": "NC",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "hurthub.davidson.edu?id=6341",
+        "global_id_lineage": [
+          "hurthub.davidson.edu?id=6341"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 1860,
+          "author": "1",
+          "status": "publish",
+          "date": "2026-08-04 07:31:59",
+          "date_utc": "2026-08-04 07:31:59",
+          "modified": "2026-08-04 07:31:59",
+          "modified_utc": "2026-08-04 07:31:59",
+          "url": "https://hurthub.davidson.edu/organizer/the-hurt-hubdavidson/",
+          "organizer": "The Hurt Hub@Davidson",
+          "slug": "the-hurt-hubdavidson",
+          "website": "https://www.eventbrite.com/o/the-hurt-hubdavidson-18005827641",
+          "global_id": "hurthub.davidson.edu?id=1860",
+          "global_id_lineage": [
+            "hurthub.davidson.edu?id=1860"
+          ]
+        }
+      ],
+      "custom_fields": [],
+      "hh_event_audience": [],
+      "hh_event_topic": []
+    },
+    {
+      "id": 6400,
+      "global_id": "hurthub.davidson.edu?id=6400",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=6400"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2026-10-22 14:55:13",
+      "date_utc": "2026-10-22 18:55:13",
+      "modified": "2026-10-22 15:01:56",
+      "modified_utc": "2026-10-22 19:01:56",
+      "url": "https://hurthub.davidson.edu/event/shop-local-at-the-hurt-hub-makers-market/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/6400",
+      "title": "Shop Local at the Makers&#8217; Market",
+      "description": "<p>The holidays are just around the corner, and we&#8217;ve got the perfect place to find one-of-a-kind gifts! Join the Hurt Hub on Friday<b>, November 13 from 4:00-7:00pm</b> for our Makers&#8217; Market, co-hosted with the Van Every/Smith Galleries at Davidson College.</p>\n<p>Discover local artisans showcasing their handcrafted goods throughout the Hurt Hub. Browse stunning pottery, artisan jewelry, small-batch jams and sauces, original prints, and so much more.</p>\n<p>Whether you&#8217;re shopping for loved ones or treating yourself (we won&#8217;t tell!), you&#8217;ll find something truly special while supporting local creators.</p>",
+      "excerpt": "",
+      "slug": "shop-local-at-the-hurt-hub-makers-market",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud.jpg",
+        "id": 6401,
+        "extension": "jpg",
+        "width": 1920,
+        "height": 1080,
+        "filesize": 249162,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 169,
+            "mime-type": "image/jpeg",
+            "filesize": 20141,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-300x169.jpg"
+          },
+          "large": {
+            "width": 1024,
+            "height": 576,
+            "mime-type": "image/jpeg",
+            "filesize": 106269,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-1024x576.jpg"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/jpeg",
+            "filesize": 12992,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-150x150.jpg"
+          },
+          "hh-card": {
+            "width": 720,
+            "height": 540,
+            "mime-type": "image/jpeg",
+            "filesize": 76780,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-720x540.jpg"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 800,
+            "mime-type": "image/jpeg",
+            "filesize": 83096,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-600x800.jpg"
+          },
+          "hh-wide": {
+            "width": 1600,
+            "height": 900,
+            "mime-type": "image/jpeg",
+            "filesize": 183533,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-1600x900.jpg"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/jpeg",
+            "filesize": 27229,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/Makers-Market_-ScreenCloud-320x240.jpg"
+          }
+        }
+      },
+      "all_day": false,
+      "start_date": "2026-11-13 16:00:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "13",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-13 19:00:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "13",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-11-13 21:00:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "13",
+        "hour": "21",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-14 00:00:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "14",
+        "hour": "00",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "Free",
+      "cost_details": {
+        "currency_symbol": "$",
+        "currency_code": "USD",
+        "currency_position": "prefix",
+        "values": [
+          "0"
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Social",
+          "slug": "social",
+          "term_group": 0,
+          "term_taxonomy_id": 115,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 6,
+          "filter": "raw",
+          "id": 115,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/115",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 6358,
+        "status": "publish",
+        "date": "2026-10-12 22:47:48",
+        "date_utc": "2026-10-13 02:47:48",
+        "modified": "2026-10-12 22:47:48",
+        "modified_utc": "2026-10-13 02:47:48",
+        "url": "https://hurthub.davidson.edu/venue/the-hurt-hub-at-davidson-college-7/",
+        "venue": "The Hurt Hub at Davidson College",
+        "slug": "the-hurt-hub-at-davidson-college-7",
+        "address": "210 Delburg Street, Davidson, NC 28036",
+        "city": "Davidson",
+        "country": "US",
+        "state": "NC",
+        "zip": "28036",
+        "stateprovince": "NC",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "hurthub.davidson.edu?id=6358",
+        "global_id_lineage": [
+          "hurthub.davidson.edu?id=6358"
+        ]
+      },
+      "organizer": [],
+      "custom_fields": [],
+      "hh_event_audience": [],
+      "hh_event_topic": [
+        102,
+        125,
+        122,
+        123,
+        126,
+        124
+      ]
+    },
+    {
+      "id": 6357,
+      "global_id": "hurthub.davidson.edu?id=6357",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=6357"
+      ],
+      "author": "2",
+      "status": "publish",
+      "date": "2026-10-12 22:47:48",
+      "date_utc": "2026-10-13 02:47:48",
+      "modified": "2026-11-03 21:47:29",
+      "modified_utc": "2026-11-04 02:47:29",
+      "url": "https://hurthub.davidson.edu/event/the-hurt-hub-innovation-entrepreneurship-showcase/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/6357",
+      "title": "The Hurt Hub Innovation &amp; Entrepreneurship Showcase",
+      "description": "<div>The Hurt Hub Innovation &amp; Entrepreneurship Showcase celebrates the inspiring work of individuals and teams connected through the Hurt Hub.</div>\n<div style=\"margin-top: 20px\">\n<div style=\"margin: 20px 10px;font-size: 15px;line-height: 22px;font-weight: 400;text-align: left\">\n<p>The third annual Hurt Hub Innovation &amp; Entrepreneurship Showcase brings together student visionaries, emerging community ventures, and entrepreneurship advocates to highlight the work happening through the Hurt Hub at Davidson College. Whether you&#8217;re an aspiring entrepreneur, a seasoned business leader, or simply curious about innovation, we invite you to join us on Wednesday, November 18, 2026 from 6-9pm.</p>\n<h4><strong><strong>Event Highlights:</strong></strong></h4>\n<p><strong><strong>Idea Sprint Competition</strong></strong></p>\n<p>Experience the Davidson Entrepreneurship Club&#8217;s signature Idea Sprint competition in a lively, expo-style showcase. Student teams staff booths throughout the Hurt Hub’s Innovation Lab, presenting business concepts they rapidly developed over the course of a month. Attendees circulate through the expo, engaging directly with teams before casting a vote for their favorite. Audience choice determines the winning concept!</p>\n<p><strong><strong>The Hurt Hub Program Expo featuring entrepreneurs from</strong></strong></p>\n<ul>\n<li>The Student Try It Fund</li>\n<li>Yoder Applied Research Fellowship</li>\n<li>Building a Lean Startup</li>\n<li>LaunchCLT’s CO.STARTERS</li>\n</ul>\n<p><strong><strong>Awards Presentation</strong></strong></p>\n<ul>\n<li>Avinger Impact Fund Finalists &amp; Awards</li>\n<li>Small Business Community Impact Fund Awards powered by the Duke  Energy Foundation</li>\n<li>FACES of Innovation Award</li>\n</ul>\n<p><strong><strong>Agenda</strong></strong></p>\n<p>6:00-7:15: IdeaSprint Voting, Networking, Entrepreneur Expo</p>\n<p>7:15-8:00: Awards Presentations</p>\n<p>8:00-9:00: Open Networking</p>\n<p></p>\n</div>\n</div>",
+      "excerpt": "",
+      "slug": "the-hurt-hub-innovation-entrepreneurship-showcase",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-scaled.jpg",
+        "id": 6360,
+        "extension": "jpg",
+        "width": 2560,
+        "height": 1280,
+        "filesize": 303221,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 150,
+            "mime-type": "image/jpeg",
+            "filesize": 11701,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-300x150.jpg"
+          },
+          "large": {
+            "width": 1024,
+            "height": 512,
+            "mime-type": "image/jpeg",
+            "filesize": 77866,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-1024x512.jpg"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/jpeg",
+            "filesize": 7043,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-150x150.jpg"
+          },
+          "hh-card": {
+            "width": 720,
+            "height": 540,
+            "mime-type": "image/jpeg",
+            "filesize": 63233,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-720x540.jpg"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 800,
+            "mime-type": "image/jpeg",
+            "filesize": 66768,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-600x800.jpg"
+          },
+          "hh-wide": {
+            "width": 1600,
+            "height": 900,
+            "mime-type": "image/jpeg",
+            "filesize": 174863,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-1600x900.jpg"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/jpeg",
+            "filesize": 17644,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/10/6357_image-320x240.jpg"
+          }
+        },
+        "original_image": "6357_image.jpg"
+      },
+      "all_day": false,
+      "start_date": "2026-11-18 18:00:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "18",
+        "hour": "18",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-18 21:00:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "18",
+        "hour": "21",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-11-18 23:00:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "18",
+        "hour": "23",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-19 02:00:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "19",
+        "hour": "02",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_code": "",
+        "currency_position": "",
+        "values": []
+      },
+      "website": "https://www.eventbrite.com/e/the-hurt-hub-innovation-entrepreneurship-showcase-tickets-2002099762284",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [],
+      "tags": [],
+      "venue": {
+        "id": 6358,
+        "status": "publish",
+        "date": "2026-10-12 22:47:48",
+        "date_utc": "2026-10-13 02:47:48",
+        "modified": "2026-10-12 22:47:48",
+        "modified_utc": "2026-10-13 02:47:48",
+        "url": "https://hurthub.davidson.edu/venue/the-hurt-hub-at-davidson-college-7/",
+        "venue": "The Hurt Hub at Davidson College",
+        "slug": "the-hurt-hub-at-davidson-college-7",
+        "address": "210 Delburg Street, Davidson, NC 28036",
+        "city": "Davidson",
+        "country": "US",
+        "state": "NC",
+        "zip": "28036",
+        "stateprovince": "NC",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "hurthub.davidson.edu?id=6358",
+        "global_id_lineage": [
+          "hurthub.davidson.edu?id=6358"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 1860,
+          "author": "1",
+          "status": "publish",
+          "date": "2026-08-04 07:31:59",
+          "date_utc": "2026-08-04 07:31:59",
+          "modified": "2026-08-04 07:31:59",
+          "modified_utc": "2026-08-04 07:31:59",
+          "url": "https://hurthub.davidson.edu/organizer/the-hurt-hubdavidson/",
+          "organizer": "The Hurt Hub@Davidson",
+          "slug": "the-hurt-hubdavidson",
+          "website": "https://www.eventbrite.com/o/the-hurt-hubdavidson-18005827641",
+          "global_id": "hurthub.davidson.edu?id=1860",
+          "global_id_lineage": [
+            "hurthub.davidson.edu?id=1860"
+          ]
+        }
+      ],
+      "custom_fields": [],
+      "hh_event_audience": [],
+      "hh_event_topic": []
+    },
+    {
+      "id": 5477,
+      "global_id": "hurthub.davidson.edu?id=5477",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=5477"
+      ],
+      "author": "1",
+      "status": "publish",
+      "date": "2026-08-24 09:14:20",
+      "date_utc": "2026-08-24 09:14:20",
+      "modified": "2026-11-02 10:31:03",
+      "modified_utc": "2026-11-02 15:31:03",
+      "url": "https://hurthub.davidson.edu/event/cpa-office-hours-schwinn-cpa-pllc-2/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/5477",
+      "title": "CPA Office Hours (SCHWINN CPA PLLC)",
+      "description": "<p>The Hurt Hub has partnered with Bob Schwinn of SCHWINN CPA PLLC to offer free 30 minute consultations for small businesses and entrepreneurs. The Schwinn CPA firm specializes in serving small businesses and will be hosting virtual office hours to answer your questions around topics such as:</p>\n<ul>\n<li>How to Set up a New Business</li>\n<li>Year-end planning for a business</li>\n<li>Basic budgeting/forecasting concepts</li>\n<li>What kinds of financial reports a small business owner should review</li>\n<li>Setting up books for a business &amp; types of accounting software</li>\n</ul>\n<p>To set up a virtual appointment, please use this <a href=\"https://calendly.com/schwinncpa/30min\">calendly link</a>. Once you click to confirm your appointment on calendly, please share a little bit about what you are looking to discuss during the meeting and what stage you’re at in your business.</p>\n<p><i>The Hurt Hub is pleased to connect our small business community with this free resource. All consultations are undertaken at the participant&#8217;s own risk and discretion; the Hurt Hub is not responsible for outcomes of individual sessions.</i></p>",
+      "excerpt": "",
+      "slug": "cpa-office-hours-schwinn-cpa-pllc-2",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA.webp",
+        "id": 4299,
+        "extension": "webp",
+        "width": 686,
+        "height": 634,
+        "filesize": 33760,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 277,
+            "mime-type": "image/webp",
+            "filesize": 10326,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA-300x277.webp"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/webp",
+            "filesize": 4494,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA-150x150.webp"
+          },
+          "hh-card": {
+            "width": 686,
+            "height": 540,
+            "mime-type": "image/webp",
+            "filesize": 26538,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA-686x540.webp"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 634,
+            "mime-type": "image/webp",
+            "filesize": 28870,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA-600x634.webp"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/webp",
+            "filesize": 9094,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/Robert-Schwinn-CPA-MBA-320x240.webp"
+          }
+        }
+      },
+      "all_day": false,
+      "start_date": "2026-11-19 09:30:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "19",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-19 12:30:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "19",
+        "hour": "12",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-11-19 14:30:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "19",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-19 17:30:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "19",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "Free",
+      "cost_details": {
+        "currency_symbol": "$",
+        "currency_code": "USD",
+        "currency_position": "prefix",
+        "values": [
+          "0"
+        ]
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Amplify Davidson",
+          "slug": "amplify-davidson",
+          "term_group": 0,
+          "term_taxonomy_id": 110,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 4,
+          "filter": "raw",
+          "id": 110,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/110",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Discussion",
+          "slug": "discussion",
+          "term_group": 0,
+          "term_taxonomy_id": 111,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 8,
+          "filter": "raw",
+          "id": 111,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/111",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Free for Students",
+          "slug": "free-for-students",
+          "term_group": 0,
+          "term_taxonomy_id": 112,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 3,
+          "filter": "raw",
+          "id": 112,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/112",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Office Hours",
+          "slug": "office-hours",
+          "term_group": 0,
+          "term_taxonomy_id": 114,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 4,
+          "filter": "raw",
+          "id": 114,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/114",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Virtual",
+          "slug": "virtual",
+          "term_group": 0,
+          "term_taxonomy_id": 121,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 1,
+          "filter": "raw",
+          "id": 121,
+          "urls": {
+            "self": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories/121",
+            "collection": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": [],
+      "organizer": [],
+      "custom_fields": [],
+      "hh_event_audience": [
+        88
+      ],
+      "hh_event_topic": []
+    },
+    {
+      "id": 6475,
+      "global_id": "hurthub.davidson.edu?id=6475",
+      "global_id_lineage": [
+        "hurthub.davidson.edu?id=6475"
+      ],
+      "author": "2",
+      "status": "publish",
+      "date": "2026-10-30 10:47:43",
+      "date_utc": "2026-10-30 14:47:43",
+      "modified": "2026-11-03 21:47:31",
+      "modified_utc": "2026-11-04 02:47:31",
+      "url": "https://hurthub.davidson.edu/event/solopreneur-circle-4/",
+      "rest_url": "https://hurthub.davidson.edu/wp-json/tribe/events/v1/events/6475",
+      "title": "Solopreneur Circle",
+      "description": "<div>A monthly community gathering for entrepreneurs to celebrate wins, work through challenges, and discover resources.</div>\n<div style=\"margin-top: 20px\">\n<div style=\"margin: 20px 10px;font-size: 15px;line-height: 22px;font-weight: 400;text-align: left\">\n<p>Each month we welcome entrepreneurs to join us at the Hurt Hub for a community gathering called the Solopreneur Circle.</p>\n<p>Facilitated by Michelle McKown-Campbell, this intimate space brings together solo entrepreneurs to celebrate wins, work through challenges, and discover resources with people who are on similar paths.</p>\n<p>Coffee, community, and conversations that matter. Your seat at the table is waiting.</p>\n<p></p>\n<p><em><em>The Hurt Hub welcomes requests for reasonable accommodations related to disability and will strive to make this program accessible to participants. Please contact our team at the Hurt Hub at hurthub@davidson.edu</em></em><em><em> </em></em><em><em>to make such a request.</em></em></p>\n</div>\n</div>",
+      "excerpt": "",
+      "slug": "solopreneur-circle-4",
+      "image": {
+        "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-scaled.jpg",
+        "id": 1881,
+        "extension": "jpg",
+        "width": 2560,
+        "height": 2131,
+        "filesize": 616631,
+        "sizes": {
+          "medium": {
+            "width": 300,
+            "height": 250,
+            "mime-type": "image/jpeg",
+            "filesize": 16270,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-300x250.jpg"
+          },
+          "large": {
+            "width": 1024,
+            "height": 852,
+            "mime-type": "image/jpeg",
+            "filesize": 121859,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-1024x852.jpg"
+          },
+          "thumbnail": {
+            "width": 150,
+            "height": 150,
+            "mime-type": "image/jpeg",
+            "filesize": 6354,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-150x150.jpg"
+          },
+          "hh-card": {
+            "width": 720,
+            "height": 540,
+            "mime-type": "image/jpeg",
+            "filesize": 64623,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-720x540.jpg"
+          },
+          "hh-portrait": {
+            "width": 600,
+            "height": 800,
+            "mime-type": "image/jpeg",
+            "filesize": 72877,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-600x800.jpg"
+          },
+          "hh-wide": {
+            "width": 1600,
+            "height": 900,
+            "mime-type": "image/jpeg",
+            "filesize": 201746,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-1600x900.jpg"
+          },
+          "hh-thumb": {
+            "width": 320,
+            "height": 240,
+            "mime-type": "image/jpeg",
+            "filesize": 16907,
+            "url": "https://hurthub.davidson.edu/wp-content/uploads/2026/08/1866_image-320x240.jpg"
+          }
+        },
+        "original_image": "1866_image.jpg"
+      },
+      "all_day": false,
+      "start_date": "2026-11-20 09:00:00",
+      "start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "20",
+        "hour": "09",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2026-11-20 10:00:00",
+      "end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "20",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2026-11-20 14:00:00",
+      "utc_start_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "20",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2026-11-20 15:00:00",
+      "utc_end_date_details": {
+        "year": "2026",
+        "month": "11",
+        "day": "20",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_code": "",
+        "currency_position": "",
+        "values": []
+      },
+      "website": "https://www.eventbrite.com/e/solopreneur-circle-tickets-2004122024926",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [],
+      "tags": [],
+      "venue": {
+        "id": 6476,
+        "status": "publish",
+        "date": "2026-10-30 10:47:43",
+        "date_utc": "2026-10-30 14:47:43",
+        "modified": "2026-10-30 10:47:43",
+        "modified_utc": "2026-10-30 14:47:43",
+        "url": "https://hurthub.davidson.edu/venue/the-hurt-hub-at-davidson-college-8/",
+        "venue": "The Hurt Hub at Davidson College",
+        "slug": "the-hurt-hub-at-davidson-college-8",
+        "address": "210 Delburg Street, Davidson, NC 28036",
+        "city": "Davidson",
+        "country": "US",
+        "state": "NC",
+        "zip": "28036",
+        "stateprovince": "NC",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "hurthub.davidson.edu?id=6476",
+        "global_id_lineage": [
+          "hurthub.davidson.edu?id=6476"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 1860,
+          "author": "1",
+          "status": "publish",
+          "date": "2026-08-04 07:31:59",
+          "date_utc": "2026-08-04 07:31:59",
+          "modified": "2026-08-04 07:31:59",
+          "modified_utc": "2026-08-04 07:31:59",
+          "url": "https://hurthub.davidson.edu/organizer/the-hurt-hubdavidson/",
+          "organizer": "The Hurt Hub@Davidson",
+          "slug": "the-hurt-hubdavidson",
+          "website": "https://www.eventbrite.com/o/the-hurt-hubdavidson-18005827641",
+          "global_id": "hurthub.davidson.edu?id=1860",
+          "global_id_lineage": [
+            "hurthub.davidson.edu?id=1860"
+          ]
+        }
+      ],
+      "custom_fields": [],
+      "hh_event_audience": [],
+      "hh_event_topic": []
+    }
+  ],
+  "total": 6
+}
