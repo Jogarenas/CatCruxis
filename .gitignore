@@ -5,3 +5,7 @@ dist/
 test-results/
 playwright-report/
 *.tsbuildinfo
+.env
+.env.*
+supabase/.temp/
+supabase/.branches/
