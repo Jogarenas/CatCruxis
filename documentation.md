@@ -14,7 +14,7 @@
 | 01 | Rainul | Jonathan | Rainul & Jonathan |
 | 02 | Jonathan | Rainul | Jonathan & Rainul |
 | 03 | Rainul | Jonathan | Rainul & Jonathan |
-| 04 | | | |
+| 04 | Jonathan| Rainul  | Jonathan & Rainul |
 | 05 | | | |
 | 06 | | | |
 
@@ -24,6 +24,7 @@ Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, depar
 
 - WildcatSync RSS feed: https://wildcatsync.davidson.edu/events.rss (where student orgs and departments post)
 - Hurt Hub events API: https://hurthub.davidson.edu/wp-json/tribe/events/v1/events (JSON)
+- Davidson College Events: https://www.davidson.edu/events (Official Davidson College hosted events)
 
 This is Option 2. The sources decided what our tables look like.
 
@@ -65,7 +66,7 @@ Neither source has official_status, so we set it ourselves. We also make up the 
 
 ### ER diagram
 
-![ER diagram](images/erd.jpeg)
+![ER diagram](images/erd.jpeg)  
 
 Made in dbdiagram.io from `images/schema.dbml` (copied in the appendix). Each line is a foreign key. The crow's foot end is the table that has the foreign key column. dbdiagram only draws the many side, so the rest is in these rules:
 
