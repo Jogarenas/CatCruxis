@@ -20,13 +20,44 @@
 
 ## Source data
 
-Students find events in a lot of places: WildcatSync, Handshake, Hurt Hub, department emails. CatCruxis puts them in one database. We have two real sources we can pull automatically...and more to come ;
 
-- WildcatSync RSS feed: https://wildcatsync.davidson.edu/events.rss (where student orgs and departments post)
-- Hurt Hub events API: https://hurthub.davidson.edu/wp-json/tribe/events/v1/events (JSON)
-- Davidson College Events: https://www.davidson.edu/events (Official Davidson College hosted events)
+### Datasets and retrieval dates
 
-This is Option 2. The sources decided what our tables look like.
+| Dataset | Where it came from | Retrieved | Saved snapshot |
+|---|---|---|---|
+| WildcatSync public events | Davidson College's Campus Labs Engage [RSS feed](https://wildcatsync.davidson.edu/events.rss), containing public student organization and department events | November 4, 2026 | [`data/raw/wildcatsync.xml`](data/raw/wildcatsync.xml): 106 listings |
+| Hurt Hub events | The Hurt Hub at Davidson College's [events API](https://hurthub.davidson.edu/wp-json/tribe/events/v1/events), provided through WordPress and The Events Calendar | November 4, 2026 | [`data/raw/hurthub.json`](data/raw/hurthub.json): 6 listings |
+| Davidson College Events | Davidson College's [events website](https://www.davidson.edu/events), scraped from the paginated listings and individual event pages | November 4, 2026 | [`data/raw/davidson.json`](data/raw/davidson.json): 45 listings |
+
+
+### Licenses and terms of use
+
+
+- **WildcatSync:** the saved RSS feed supplies no explicit dataset license. Anthology's.
+
+- **Hurt Hub:** no explicit dataset license is recorded in the saved API response.
+
+- **Davidson College Events:** the [events website](https://www.davidson.edu/events) carries a Davidson College copyright notice and links to the [Davidson College Technology Terms of Service](https://www.davidson.edu/offices-and-services/technology-innovation/it-guidelines-policies/davidson-college-technology-terms-service). Those terms require compliance with copyright and prohibit unauthorized access or interference with services.
+
+The external content is attributed to its original sources through `event_source.source_url`.
+
+### Row origins by database table
+
+This table describes the load implemented in the ETL notebook. “Fabricated” includes project-defined placeholders and fallback values used when a source omits information.
+
+| Database table | Row origin | How rows are produced |
+|---|---|---|
+| `building` | External datasets | Distinct building names parsed and standardized from locations in all three datasets. Latitude and longitude remain NULL in the current ETL. |
+| `location` | External datasets | Distinct building/room pairs parsed from the three datasets and linked to `building`. |
+| `event` | External datasets | Cleaned event details from all three datasets, deduplicated by normalized title and start time. `official_status` is assigned by a ruler rather than supplied by a source.  |
+| `organizer` | External datasets | Distinct WildcatSync hosts and Hurt Hub organizers, with spelling aliases normalized. |
+| `category` | External datasets | Distinct WildcatSync and Hurt Hub categories after cleaning. Events without categories use a default `General` category. |
+| `event_organizer` | External datasets | Generated from each event's organizers |
+| `event_category` | External datasets | Generated from each event's categories, including `General` when no real category is available. |
+| `source` | Migration | Three reference rows—WildcatSync, Hurt Hub, and Davidson College Events—inserted by [`20261105171601_reference_rows.sql`](supabase/migrations/20261105171601_reference_rows.sql). |
+| `event_source` | External datasets | One link per distinct event/source pair, using the original event URL and the source ID from the migration. |
+
+
 
 ### WildcatSync field mapping
 
@@ -59,9 +90,7 @@ And the Hurt Hub fields:
 ### Data characteristics and integration considerations
 
 Things in the data that shaped the design: a WildcatSync event can have several hosts (one had nine), and Hurt Hub gives a list of organizers and a list of categories too. WildcatSync locations are free text, spelled different ways, and virtual events have a Zoom link there. Hurt Hub titles come HTML-encoded, so the ETL has to clean them.
-
-Neither source has official_status, so we set it ourselves. We also make up the source rows and look up building coordinates by hand. Handshake, department email and student submissions can't be scraped, so those events will be made up.
-
+ 
 ## Database design
 
 ### ER diagram
