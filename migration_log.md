@@ -15,3 +15,9 @@ Migration #1, October 22, 20261022210318_initial_schema
 •⁠  ⁠*Migration file:* ⁠ supabase/migrations/`20261030140653_created_modified_times.sql`
 •⁠  ⁠*What changed:* Added the created and modified times to each column in our schema.
 •⁠  ⁠*Why:* Needed to get started on the ETL process, aka sprint 4
+
+## 2026-11-05: Reference rows for source
+
+- **Migration file:** `supabase/migrations/20261105171601_reference_rows.sql`
+- **What changed:** Inserted the 3 rows of the `source` table: WildcatSync (platform), Hurt Hub (website), Davidson College Events (website).
+- **Why:** These rows are written by hand, not loaded from any dataset, and every `event_source` row depends on them. As a migration they exist in every copy of the database before the ETL runs, and the notebook never truncates them. Davidson College Events was added because we found davidson.edu/events while gathering data. Handshake isn't included yet because we have no data for it.
