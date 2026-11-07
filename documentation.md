@@ -93,6 +93,15 @@ Things in the data that shaped the design: a WildcatSync event can have several 
  
 ## Database design
 
+### How to rebuild the database
+
+1. Create an empty PostgreSQL test database named `__catcruxis`.
+2. Run the SQL files in `supabase/migrations/` in order: `20261022210318_initial_schema.sql`, `20261030140653_created_modified_times.sql`, then `20261105171601_reference_rows.sql`. These create the tables, timestamp triggers, and three source rows.
+3. Set `DEV_DB_SERVER` in your local `.env` to the PostgreSQL connection URL without a database name.
+4. Open `etl/etl_pipeline.ipynb` with `etl/` as the working directory. Keep `TARGET = "TEST"` and use the saved files in `data/raw/`.
+5. Run the notebook from top to bottom to clean, normalize, and load the data.
+6. Check that all notebook assertions pass and every row in the final verification table has `match = true`.
+
 ### ER diagram
 
 ![ER diagram](images/erd.jpeg)  
@@ -174,6 +183,14 @@ Many-to-many relationships: event/organizer, event/category and event/source. Th
 ## Analysis and reflection questions
 
 ### Data sourcing and integration
+
+We collected real event listings from WildcatSync's RSS feed, the Hurt Hub's JSON API, and Davidson's events website. These sources had the titles, dates, descriptions, and locations our database needed, but getting the same information from each took some extraeffort. WildcatSync and Hurt Hub provided structured data. For Davidson, we had to follow the listing pages and visit each event page for its details. We saved the raw files so we could repeat the cleaning without downloading everything again.
+
+The main challenge was making the sources fit the same schema without losing information. Some events had several hosts or categories, which supported our decision to use bridge tables. Locations were harder: one field could contain a building, a room, or a Zoom link. We standardized known building names, separated rooms, and used `Online / TBD` for missing or virtual locations. 
+
+We removed cancelled listings, extra spaces, HTML tags, and encoded characters in titles and descriptions. We also removed repeated date and time text from Davidson descriptions. Dates came in different formats, and Davidson times had no time zone, so we treated those as America/New_York and converted all times to UTC. We matched duplicate listings by cleaned title and start time, keeping one event while preserving its source links.
+
+Some gaps required our own rules. Missing organizers use `Davidson College` or `The Hurt Hub`, and missing categories use `General`. We also assign official status ourselves. These defaults help the data fit the schema, but they are assumptions. Coordinates and organizer types remain NULL.  Working with the real data showed us that meeting database constraints and accurately describing an event are separate challenges.
 
 ### Design reflection
 
