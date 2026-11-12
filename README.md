@@ -4,7 +4,7 @@ CatCruxis models campus events, activities, and opportunities across Davidson Co
 
 The main users of CatCruxis would be Davidson students and event managers. Students would use the database to discover events and opportunities that match their interests without having to search across several different platforms. Event managers, student organizations, departments, and other campus groups could use it to make their events easier to find and ensure that event information is organized consistently in one place.
 
-DAT 153: Database Programming, Davidson College, Fall 2026
+DAT 153: Database Programming, Davidson College, Fall 2026. With the man himself, Benbow...
 
 ## Team
 
