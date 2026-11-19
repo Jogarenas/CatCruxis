@@ -28,3 +28,23 @@ GROUP BY
     e.event_id,
     b.building_name,
     l.room_number;
+
+
+CREATE OR REPLACE FUNCTION public.fn_days_until_event(
+    p_start_time TIMESTAMPTZ,
+    p_as_of DATE DEFAULT
+        (CURRENT_TIMESTAMP AT TIME ZONE 'America/New_York')::DATE
+)
+RETURNS INTEGER
+LANGUAGE SQL
+STABLE
+AS $$
+    SELECT
+        CASE
+            WHEN p_start_time IS NULL OR p_as_of IS NULL
+                THEN NULL
+            ELSE
+                (p_start_time AT TIME ZONE 'America/New_York')::DATE
+                - p_as_of
+        END;
+$$;
