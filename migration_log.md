@@ -18,6 +18,12 @@ Migration #1, October 22, 20261022210318_initial_schema
 
 ## 2026-11-05: Reference rows for source
 
-- **Migration file:** `supabase/migrations/20261105171601_reference_rows.sql`
-- **What changed:** Inserted the 3 rows of the `source` table: WildcatSync (platform), Hurt Hub (website), Davidson College Events (website).
-- **Why:** These rows are written by hand, not loaded from any dataset, and every `event_source` row depends on them. As a migration they exist in every copy of the database before the ETL runs, and the notebook never truncates them. Davidson College Events was added because we found davidson.edu/events while gathering data. Handshake isn't included yet because we have no data for it.
+- *Migration file:* `supabase/migrations/20261105171601_reference_rows.sql`
+- *What changed:* Inserted the 3 rows of the `source` table: WildcatSync (platform), Hurt Hub (website), Davidson College Events (website).
+- *Why:* These rows are written by hand, not loaded from any dataset, and every `event_source` row depends on them. As a migration they exist in every copy of the database before the ETL runs, and the notebook never truncates them. Davidson College Events was added because we found davidson.edu/events while gathering data. Handshake isn't included yet because we have no data for it.
+
+## 2026-11-19: Event Overview View
+
+•⁠  *Migration file*: `supabase/migrations/<timestamp>_event_overview_and_days_until.sql`
+•⁠ *What changed*: Created the `vw_event_overview view`, which joins the `event`, `location`, `building`, `event_organizer`, and `organizer` tables. The view displays event details, dates, locations, and organizers in one place. Multiple organizers are combined into a single field so each event appears only once.
+•⁠  *Why*: To make it easier to retrieve complete event information without repeatedly writing complex joins. This allows students to find events and their locations more easily while also supporting historical event reporting. The view uses `security_invoker` = true to respect the querying user’s database permissions.
