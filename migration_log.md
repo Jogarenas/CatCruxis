@@ -41,3 +41,37 @@ Migration #1, October 22, 20261022210318_initial_schema
 •⁠  *Why*: To improve the performance of queries that filter and order events by their start time. As CatCruxis continues to collect more events, this index may help PostgreSQL retrieve upcoming or historical events more efficiently.
 
 •⁠  Performance comparison: Pending verification. The full EXPLAIN ANALYZE execution plans from before and after creating the index will be added here, along with the observed differences in scan type, sorting, and execution time.
+
+
+**Query tested (on TEST):**
+
+```sql
+EXPLAIN ANALYZE
+SELECT event_id, title, start_time FROM event
+WHERE start_time BETWEEN '2026-11-19' AND '2026-11-26'
+ORDER BY start_time;
+```
+
+**Before the index** (dropped inside a transaction, then rolled back):
+
+```
+Sort  (cost=16.53..16.57 rows=14 width=55) (actual time=0.135..0.139 rows=14 loops=1)
+  Sort Key: start_time
+  Sort Method: quicksort  Memory: 25kB
+  ->  Seq Scan on event  (cost=0.00..16.27 rows=14 width=55) (actual time=0.036..0.098 rows=14 loops=1)
+        Filter: ((start_time >= '2026-11-19 00:00:00+00'::timestamp with time zone) AND (start_time <= '2026-11-26 00:00:00+00'::timestamp with time zone))
+        Rows Removed by Filter: 137
+Planning Time: 0.288 ms
+Execution Time: 0.196 ms
+```
+
+**After the index:**
+
+```
+Index Scan using ix_event_start_time on event  (cost=0.14..11.76 rows=14 width=55) (actual time=0.096..0.115 rows=14 loops=1)
+  Index Cond: ((start_time >= '2026-11-19 00:00:00+00'::timestamp with time zone) AND (start_time <= '2026-11-26 00:00:00+00'::timestamp with time zone))
+Planning Time: 0.591 ms
+Execution Time: 0.169 ms
+```
+
+**Comparison:** Before the index, PostgreSQL ran a `Seq Scan` over all 151 rows of `event`, threw away 137 of them with the filter, and sorted the remaining 14 in a separate `Sort` step (Execution Time: 0.196 ms). With `ix_event_start_time`, it switched to an `Index Scan` that reads only the 14 rows in the date range and returns them already ordered by `start_time`, so the sort step disappears and the estimated cost drops from 16.57 to 11.76 (Execution Time: 0.169 ms). At 151 rows the time saved is tiny and within normal variation. The real gain is the plan: a sequential scan has to read every event, so it grows as events pile up over semesters, while the index scan only touches the week being asked for.
