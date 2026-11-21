@@ -178,9 +178,37 @@ Many-to-many relationships: event/organizer, event/category and event/source. Th
 
 #### Views
 
+**vw_event_overview**: each row is one event. It joins `event`, `location`, `building`, `event_organizer` and `organizer` to show an event's title, description, start and end time, official status, building, room, and all of its organizers combined into one comma-separated field. It's for students browsing what's on, and for anyone making a weekly events report: instead of writing the same five-table join every time, they query one view. Organizers are combined with `STRING_AGG` so an event with several hosts still appears only once. The view is created `WITH (security_invoker = true)`, so it runs with the permissions of whoever queries it.
+
+
 #### Functions/procedures
 
+**fn_days_until_event(p_start_time TIMESTAMPTZ, p_as_of DATE)** returns an `INTEGER`: how many calendar days from `p_as_of` until the event starts, counted in Davidson's local time (America/New_York).
+
+- `p_start_time`: the event's start time, usually `event.start_time`.
+- `p_as_of`: the date to count from. Optional; defaults to today in Davidson.
+
+Positive means the event is in the future, 0 means today, negative means it's past. If either input is NULL, it returns NULL.
+
+```sql
+SELECT fn_days_until_event('2026-11-25 23:00+00', '2026-11-19');   -- returns 6
+
+SELECT title, fn_days_until_event(start_time) AS days_until
+FROM vw_event_overview
+ORDER BY start_time;
+```
+
+### Indexes
+
+| Index | Columns | Query it supports |
+|---|---|---|
+| `ix_event_start_time` | `event(start_time)` | "What's on this week?": filtering events by a date range and sorting by start time |
+
+We tested it with `EXPLAIN ANALYZE` on TEST (full plans in `migration_log.md`). Without the index, PostgreSQL ran a Seq Scan over all 151 events and then a separate Sort. With the index, it switched to an Index Scan that reads only the 14 events in that week, already in order (estimated cost 16.57 → 11.76, execution 0.196 ms → 0.169 ms). The time saved is tiny at our size, but a sequential scan grows with the table, while the index scan only reads the requested week.
+
 ## Analysis and reflection questions
+
+
 
 ### Data sourcing and integration
 
@@ -195,6 +223,12 @@ Some gaps required our own rules. Missing organizers use `Davidson College` or `
 ### Design reflection
 
 ### Deployment and migration reflection
+
+In Sprint 03 we deployed an empty schema, so mistakes were cheap. In Sprint 05 the database already held real data, so every change went in as a new migration (one for the view and function, one for the index), logged in migration_log.md, without editing schema/ or older migrations. These changes only added objects, so no existing rows or notebook code had to change.
+
+Testing on TEST first caught real problems. Our two TEST databases have different names (_catcruxis and __catcruxis), so when the name was hard-coded in the notebook it broke for one of us. We fixed it by reading TEST_DB_NAME from each person’s .env. We also learned that migrations must be pushed to each TEST database separately. Smaller slips, like a CREATE DATABASE missing its semicolon and wrong filenames in the migration log, were caught and fixed before reaching PROD.
+
+The rebuild test (drop TEST, replay every migration, run the notebook) gave the same row counts as before, proving the database can be rebuilt from the repository alone. Our main lesson: most problems came from setup and naming, not SQL, and TEST is where we found them.
 
 ### Project outcomes and learning
 
